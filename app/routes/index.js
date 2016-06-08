@@ -7,6 +7,11 @@ export default Ember.Route.extend({
     });
   },
   actions: {
+    newPost(params) {
+      var newPost = this.store.createRecord('post', params);
+      newPost.save();
+      this.transitionTo('index');
+    },
     update(post, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {

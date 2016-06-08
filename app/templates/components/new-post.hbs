@@ -1,20 +1,30 @@
-<div style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-right:-8%;margin-left: 14px;background:#fdf6e5">
+<div style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;width:211px;margin-left: 14px;background:#fdf6e5">
 <h1>New Post</h1>
   <div>
     <form>
       <div class="form-group">
         <label for="title" ></label>
-        {{input value=title id="title" placeholder="title"}}
+        {{input value=title id="newtitle" placeholder="title"}}
       </div>
 
       <div class="form-group">
         <label for="content"></label>
-        {{input value=content id="content" placeholder="content"}}
+        {{input value=content id="newcontent" placeholder="content"}}
       </div>
 
       <div class="form-group">
         <label for="image"></label>
-        {{input value=image id="image" placeholder="image"}}
+        {{input value=image id="newimage" placeholder="image"}}
+      </div>
+
+      <div class="form-group">
+        <label for="category"></label>
+        {{input value=category id="newcategory" placeholder="category"}}
+      </div>
+
+      <div class="form-group">
+        <label for="tags"></label>
+        {{input value=tags id="newtags" placeholder="tags"}}
       </div>
 
       <button {{action 'newPost'}}>Save</button>

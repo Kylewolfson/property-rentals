@@ -10,6 +10,9 @@ export default Ember.Component.extend({
     if (confirm('Are you sure you want to delete this post?')) {
       this.sendAction('destroyPost', post);
     }
+    },
+    newPost(post, params) {
+      this.sendAction('newPost', post, params);
+    }
   }
-}
 });
