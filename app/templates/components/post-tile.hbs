@@ -1,7 +1,7 @@
 <div class="col-md-9">
 <ul>
   {{#each model as |post|}}
-    <li style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-right:25px;background:#FFE5B4">
+    <li style="border: 1px #ccc solid;list-style-type:none;padding:15px;margin-bottom:5px;margin-right:25px;background:#FAFAFA;box-shadow: 1px 1px 1px 1px #3896A3">
       <h2 style="border-bottom:1px #ccc solid">{{post.title}}</h2>
         <img style="width:20%;height:150px;float:left;margin-right:25px" src="{{post.image}}">
       <p>{{post.contents}}</p>
@@ -9,6 +9,7 @@
     </li>
   {{/each}}
 </ul>
+<p style="text-align:center">(Showing last 3 posts)</p>
 </div>
 <div class="col-md-3">
 <form class="navbar-form" role="search">
