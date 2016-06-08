@@ -1,21 +1,23 @@
+<div style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-right:-8%;margin-left: 14px;background:#fdf6e5">
 <h1>New Post</h1>
   <div>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
-        {{input value=title id="title"}}
+        <label for="title" ></label>
+        {{input value=title id="title" placeholder="title"}}
       </div>
 
       <div class="form-group">
-        <label for="content">Content</label>
-        {{input value=content id="content"}}
+        <label for="content"></label>
+        {{input value=content id="content" placeholder="content"}}
       </div>
 
       <div class="form-group">
-        <label for="image">Image</label>
-        {{input value=image id="image"}}
+        <label for="image"></label>
+        {{input value=image id="image" placeholder="image"}}
       </div>
 
       <button {{action 'newPost'}}>Save</button>
     </form>
   </div>
+</div>

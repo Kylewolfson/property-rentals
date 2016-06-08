@@ -1,11 +1,11 @@
 <div class="col-md-9">
 <ul>
   {{#each model as |post|}}
-    <li style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-right:25px">
+    <li style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-right:25px;background:#FFE5B4">
       <h2 style="border-bottom:1px #ccc solid">{{post.title}}</h2>
         <img style="width:20%;height:150px;float:left;margin-right:25px" src="{{post.image}}">
       <p>{{post.contents}}</p>
-      {{post-edit post=post update="update"}}
+      {{post-edit post=post update="update"}} <button style="display:inline-block" {{action 'delete' post}}>Delete</button>
     </li>
   {{/each}}
 </ul>
@@ -19,4 +19,5 @@
     </div>
   </div>
 </form>
+{{new-post newPost="newPost"}}
 </div>
