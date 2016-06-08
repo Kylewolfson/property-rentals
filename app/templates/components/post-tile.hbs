@@ -1,0 +1,9 @@
+<ul>
+  {{#each model as |post|}}
+    <li>
+      <h2>{{post.title}}</h2>
+      <img src="{{post.image}}">
+      <p>{{post.text}}</p>
+    </li>
+  {{/each}}
+</ul>
