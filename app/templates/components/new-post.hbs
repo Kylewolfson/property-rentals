@@ -1,0 +1,21 @@
+<h1>New Post</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=title id="title"}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content</label>
+        {{input value=content id="content"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image</label>
+        {{input value=image id="image"}}
+      </div>
+
+      <button {{action 'newPost'}}>Save</button>
+    </form>
+  </div>
