@@ -7,13 +7,12 @@ export default Ember.Route.extend({
   actions: {
     newComment(params) {
       var newComment = this.store.createRecord('comment', params);
-      debugger;
       var post = params.post;
       post.get('comments').addObject(newComment);
       newComment.save().then(function() {
         return post.save();
       });
-      this.transitionTo('post', params.post);
+      this.transitionTo('post-view', params.post);
     },
     update(comment, params) {
       Object.keys(params).forEach(function(key) {
@@ -22,7 +21,11 @@ export default Ember.Route.extend({
         }
       });
       comment.save();
-      this.transitionTo('post/:model.id');
+      this.transitionTo('post-view', params.post);
+    },
+    destroyComment(comment) {
+      comment.destroyRecord();
+      this.transitionTo('post-view', params.post);
     }
   }
 });

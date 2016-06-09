@@ -7,6 +7,7 @@ export default Ember.Component.extend({
       this.set('updateCommentForm', true);
     },
     update(commentToEdit) {
+      debugger;
       var params = {
         comment: this.get('comment')
       };
