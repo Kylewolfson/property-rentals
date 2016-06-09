@@ -1,7 +1,13 @@
 <div style="background:#FFF;box-shadow: 1px 1px 1px 1px #3896A3;padding:15px;margin-left:50px;margin-right:50px;min-height:280px">
-<h1>{{model.title}}</h1>
-<p>Category: {{model.category}} Tags: {{model.tags}} <span style="float:right">Posted at: {{model.date}}</span></p>
-<img style="width:20%;height:150px;float:left;margin-right:25px" src="{{model.image}}">
-<p>{{model.contents}}</p>
-<button style="display:inline-block" {{action 'delete' model}}>Delete</button>
+  <h1>{{model.title}}</h1>
+  <p>Category: {{model.category}} Tags: {{model.tags}} <span style="float:right">Posted at: {{model.date}}</span></p>
+  <img style="width:20%;height:150px;float:left;margin-right:25px" src="{{model.image}}">
+  <p>{{model.contents}}</p>
+  <h3>Comments</h3>
+  {{#each model.comments as |comment|}}
+  <p style="font-family: Consolas;border-left:1px #ccc solid;margin-left: 20px;padding-left: 20px">{{comment.comment}} at {{comment.date}}</p>
+  {{/each}}
+  <button style="display:inline-block" {{action 'delete' model}}>Delete</button>
 </div>
+
+{{new-comment newComment="newComment" post=model}}

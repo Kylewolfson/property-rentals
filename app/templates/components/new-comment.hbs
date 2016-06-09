@@ -1,0 +1,12 @@
+<div style="border: 1px #ccc solid;list-style-type:none;padding:15px;border-radius:5px;margin-bottom:5px;margin-left: 50px;margin-right:50px;margin-top:20px;background:#fdf6e5">
+<h1>New Comment</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="comment" ></label>
+        {{input value=comment id="newcomment" placeholder="comment"}}
+      </div>
+      <button {{action 'newComment'}}>Save</button>
+    </form>
+  </div>
+</div>
