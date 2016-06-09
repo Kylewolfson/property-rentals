@@ -14,6 +14,15 @@ export default Ember.Route.extend({
         return post.save();
       });
       this.transitionTo('post', params.post);
+    },
+    update(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          comment.set(key,params[key]);
+        }
+      });
+      comment.save();
+      this.transitionTo('post/:model.id');
     }
   }
 });
